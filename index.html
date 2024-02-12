@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarttruck</title>
+    <link rel="stylesheet" href="./styles/circuit.css">
+    <link rel="stylesheet" href="./styles/acceuil.css">
+    <script src="./script.js" type="module"></script>
+</head>
+<body>
+
+    <div id="ecranAcc">
+        <img src="./medias/volume-eleve.png" alt="" id="iconeUp">
+        <h2>SMART-TRUCK</h2>
+        <img src="./medias/EcranAcceuil.jpg" alt="" id="imageAcc">
+        <button id="boutonAcc">EN ROUTE</button>
+        </div>
+    
+    <header id="header">
+
+        
+        <button id="regles" class="bouton">REGLES</button>
+
+        <h1>SMART-TRUCK</h1>
+
+        <p class="typeCircuit">ROUTE EN GOUDRON</p>
+
+        <button id="scores" class="bouton">SCORES</button>
+        
+    </header>
+    <main id="main">
+
+        <img src="./medias/NormalRoad.jpg" alt="" class="routeGoudron">
+        <div class="trajet">
+            <img src="./medias/VanDeSurfPNG.png" alt="" class="trajetVehicule">
+        </div>
+
+
+    </main>
+    <footer id="footer">
+
+        <div id="form" class="attribut">FORME
+            <p>Choix de la forme de la roue</p>
+                <input type="radio" id="ronde" name="options" value="ronde">
+                <label for="ronde"  id="boutonChoix">RONDE</label><br>
+                <input type="radio" id="carre" name="options" value="carre">
+                <label for="carre" id="boutonChoix">CARRE</label><br>
+                <input type="radio" id="etoile" name="options" value="etoile">
+                <label for="etoile" id="boutonChoix">ETOILE</label><br><br>
+        </div>
+            
+        <div id="matiere" class="attribut">MATIERE
+                <p>Choix de la matière de la roue</p>
+                <input type="radio" id="caoutchouc" name="options" value="caoutchouc">
+                <label for="caoutchouc"  id="boutonChoix">CAOUTCHOUC</label><br>
+                <input type="radio" id="metal" name="options" value="metal">
+                <label for="metal" id="boutonChoix">METAL</label><br>
+                <input type="radio" id="bois" name="options" value="bois">
+                <label for="bois" id="boutonChoix">BOIS</label><br><br>
+        </div>
+        <div id="type" class="attribut">TYPE
+            <p>Choix du type de la roue</p>
+                <input type="radio" id="lisse" name="LISSE" value="lisse" onclick="appliquerLisse()">
+                <label for="lisse"  id="boutonChoix">LISSE</label><br>
+                <input type="radio" id="clou" name="CLOUTER" value="clou" onclick="appliquerClou()">
+                <label for="clou" id="boutonChoix">A CLOU</label><br>
+                <input type="radio" id="aube" name="A AUBE" value="aube" onclick="appliquerAube()">
+                <label for="aube" id="boutonChoix">A AUBE</label><br><br>
+        </div>
+        <div id="vosChoix"></div>
+            
+
+        <button class="enRoute">EN ROUTE</button>
+        <div id="ecranSelectionVehicule"></div>
+        </footer>
+</body>
+
+</html>
