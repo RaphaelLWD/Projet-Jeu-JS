@@ -23,6 +23,9 @@ function ChangeNameRoad() {
         case "https://soft-youtiao-97d35b.netlify.app/medias/SnowRoad.jpg":
             document.querySelector('.typeCircuit').innerText = "Route Enneigée";
             break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/GameOver.jpg":
+            document.querySelector('.typeCircuit').style.display = "none";
+        // setInterval
     }
 }
 
