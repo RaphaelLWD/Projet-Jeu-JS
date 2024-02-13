@@ -7,7 +7,7 @@ let currentIndex = 0;
 
 // -------------- Trajet + Score -------------------//
 function ChangeNameRoad() {
-    switch (document.querySelector('.routeGoudron').src) {
+    switch (document.querySelector('.typeCircuit').src) {
         case "https://soft-youtiao-97d35b.netlify.app/medias/NormalRoad.jpg":
             document.querySelector('.typeCircuit').innerText = "Route Goudron";
             break;
@@ -263,6 +263,7 @@ circuitSuivant.addEventListener("click", () => {
     ChangeNameRoad();
 
 })
+
 // Trajet Boueux // 
 // Trajet Enneigé //
 // TRajet Eau // 
