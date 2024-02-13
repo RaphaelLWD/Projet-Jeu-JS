@@ -6,24 +6,27 @@ let circuit = new Circuit(0);
 let currentIndex = 0;
 
 // -------------- Trajet + Score -------------------//
-
-switch (document.querySelector('.routeGoudron').src) {
-    case "https://soft-youtiao-97d35b.netlify.app/medias/NormalRoad.jpg":
-        document.querySelector('.typeCircuit').innerText = "Route Goudron";
-        break;
-    case "https://soft-youtiao-97d35b.netlify.app/medias/BoueuseRoad.jpg":
-        document.querySelector('.typeCircuit').innerText = "Route Boueuse";
-        break;
-    case "https://soft-youtiao-97d35b.netlify.app/medias/MagmaRoad.jpg":
-        document.querySelector('.typeCircuit').innerText = "Route Magmatique";
-        break;
-    case "https://soft-youtiao-97d35b.netlify.app/medias/WaterRoad.jpg":
-        document.querySelector('.typeCircuit').innerText = "Route Aquatique";
-        break;
-    case "https://soft-youtiao-97d35b.netlify.app/medias/SnowRoad.jpg":
-        document.querySelector('.typeCircuit').innerText = "Route GEnneigée";
-        break;
+function ChangeNameRoad() {
+    switch (document.querySelector('.routeGoudron').src) {
+        case "https://soft-youtiao-97d35b.netlify.app/medias/NormalRoad.jpg":
+            document.querySelector('.typeCircuit').innerText = "Route Goudron";
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/BoueuseRoad.jpg":
+            document.querySelector('.typeCircuit').innerText = "Route Boueuse";
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/MagmaRoad.jpg":
+            document.querySelector('.typeCircuit').innerText = "Route Magmatique";
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/WaterRoad.jpg":
+            document.querySelector('.typeCircuit').innerText = "Route Aquatique";
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/SnowRoad.jpg":
+            document.querySelector('.typeCircuit').innerText = "Route Enneigée";
+            break;
+    }
 }
+
+
 
 /* Trajet GOUDRON (à modifier au niveau des valeurs des attributs pour faire correspondre à la route en goudron cf.doc papier)*/
 document.getElementById('startButton').addEventListener('click', function () {
@@ -257,6 +260,7 @@ circuitSuivant.addEventListener("click", () => {
     circuit.routeAleatoire(currentIndex);
     currentIndex++;
     repositionneVehicule.style.left = 0;;
+    ChangeNameRoad();
 
 })
 // Trajet Boueux // 
