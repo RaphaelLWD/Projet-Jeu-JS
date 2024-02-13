@@ -18,49 +18,198 @@ document.getElementById('startButton').addEventListener('click', function () {
         alert("Veuillez sélectionner un type, une forme et un matériau.");
         return;
     }
-
+    console.log(document.querySelector('.routeGoudron').src);
     let typeValeur = selectionType.value;
     let formeValeur = selectionForme.value;
     let matiereValeur = selectionMatiere.value;
 
     let typeSpeed;
     let typeScore;
-    if (typeValeur === "lisse") {
-        typeSpeed = 1; // vitesse rapide
-        typeScore = 100; // score pour vitesse rapide
-    } else if (typeValeur === "à clou") {
-        typeSpeed = 2; // vitesse normale
-        typeScore = 50; // score pour vitesse normale
-    } else if (typeValeur === "à aube") {
-        typeSpeed = 3; // vitesse lente
-        typeScore = 0; // score pour vitesse lente
-    }
-
     let formeSpeed;
     let formeScore;
-    if (formeValeur === "rond") {
-        formeSpeed = 1;
-        formeScore = 100;
-    } else if (formeValeur === "carre") {
-        formeSpeed = 2;
-        formeScore = 50;
-    } else if (formeValeur === "etoile") {
-        formeSpeed = 3;
-        formeScore = 0;
-    }
-
     let matiereSpeed;
     let matiereScore;
-    if (matiereValeur === "caoutchouc") {
-        matiereSpeed = 1;
-        matiereScore = 100;
-    } else if (matiereValeur === "bois") {
-        matiereSpeed = 2;
-        matiereScore = 50;
-    } else if (matiereValeur === "metal") {
-        matiereSpeed = 3;
-        matiereScore = 0;
+
+    switch (document.querySelector('.routeGoudron').src) {
+        case "https://soft-youtiao-97d35b.netlify.app/medias/NormalRoad.jpg":
+            if (typeValeur === "lisse") {
+                typeSpeed = 1; // vitesse rapide
+                typeScore = 100; // score pour vitesse rapide
+            } else if (typeValeur === "à clou") {
+                typeSpeed = 2; // vitesse normale
+                typeScore = 50; // score pour vitesse normale
+            } else if (typeValeur === "à aube") {
+                typeSpeed = 3; // vitesse lente
+                typeScore = 0; // score pour vitesse lente
+            }
+
+
+            if (formeValeur === "rond") {
+                formeSpeed = 1;
+                formeScore = 100;
+            } else if (formeValeur === "carre") {
+                formeSpeed = 2;
+                formeScore = 50;
+            } else if (formeValeur === "etoile") {
+                formeSpeed = 3;
+                formeScore = 0;
+            }
+
+
+            if (matiereValeur === "caoutchouc") {
+                matiereSpeed = 1;
+                matiereScore = 100;
+            } else if (matiereValeur === "bois") {
+                matiereSpeed = 2;
+                matiereScore = 50;
+            } else if (matiereValeur === "metal") {
+                matiereSpeed = 3;
+                matiereScore = 0;
+            }
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/BoueuseRoad.jpg":
+            if (typeValeur === "lisse") {
+                typeSpeed = 3; // vitesse rapide
+                typeScore = 0; // score pour vitesse rapide
+            } else if (typeValeur === "à clou") {
+                typeSpeed = 2; // vitesse normale
+                typeScore = 50; // score pour vitesse normale
+            } else if (typeValeur === "à aube") {
+                typeSpeed = 1; // vitesse lente
+                typeScore = 100; // score pour vitesse lente
+            }
+
+            if (formeValeur === "rond") {
+                formeSpeed = 3;
+                formeScore = 0;
+            } else if (formeValeur === "carre") {
+                formeSpeed = 2;
+                formeScore = 50;
+            } else if (formeValeur === "etoile") {
+                formeSpeed = 1;
+                formeScore = 100;
+            }
+
+
+            if (matiereValeur === "caoutchouc") {
+                matiereSpeed = 2;
+                matiereScore = 50;
+            } else if (matiereValeur === "bois") {
+                matiereSpeed = 1;
+                matiereScore = 100;
+            } else if (matiereValeur === "metal") {
+                matiereSpeed = 3;
+                matiereScore = 0;
+            }
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/MagmaRoad.jpg":
+            if (typeValeur === "lisse") {
+                typeSpeed = 3; // vitesse rapide
+                typeScore = 0; // score pour vitesse rapide
+            } else if (typeValeur === "à clou") {
+                typeSpeed = 2; // vitesse normale
+                typeScore = 50; // score pour vitesse normale
+            } else if (typeValeur === "à aube") {
+                typeSpeed = 1; // vitesse lente
+                typeScore = 100; // score pour vitesse lente
+            }
+
+            if (formeValeur === "rond") {
+                formeSpeed = 3;
+                formeScore = 0;
+            } else if (formeValeur === "carre") {
+                formeSpeed = 1;
+                formeScore = 100;
+            } else if (formeValeur === "etoile") {
+                formeSpeed = 2;
+                formeScore = 50;
+            }
+
+
+            if (matiereValeur === "caoutchouc") {
+                matiereSpeed = 3;
+                matiereScore = 0;
+            } else if (matiereValeur === "bois") {
+                matiereSpeed = 2;
+                matiereScore = 50;
+            } else if (matiereValeur === "metal") {
+                matiereSpeed = 1;
+                matiereScore = 100;
+            }
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/WaterRoad.jpg":
+            if (typeValeur === "lisse") {
+                typeSpeed = 3; // vitesse rapide
+                typeScore = 0; // score pour vitesse rapide
+            } else if (typeValeur === "à clou") {
+                typeSpeed = 2; // vitesse normale
+                typeScore = 50; // score pour vitesse normale
+            } else if (typeValeur === "à aube") {
+                typeSpeed = 1; // vitesse lente
+                typeScore = 100; // score pour vitesse lente
+            }
+
+            if (formeValeur === "rond") {
+                formeSpeed = 2;
+                formeScore = 50;
+            } else if (formeValeur === "carre") {
+                formeSpeed = 3;
+                formeScore = 0;
+            } else if (formeValeur === "etoile") {
+                formeSpeed = 1;
+                formeScore = 100;
+            }
+
+
+            if (matiereValeur === "caoutchouc") {
+                matiereSpeed = 1;
+                matiereScore = 100;
+            } else if (matiereValeur === "bois") {
+                matiereSpeed = 2;
+                matiereScore = 50;
+            } else if (matiereValeur === "metal") {
+                matiereSpeed = 3;
+                matiereScore = 0;
+            }
+            break;
+        case "https://soft-youtiao-97d35b.netlify.app/medias/SnowRoad.jpg":
+            if (typeValeur === "lisse") {
+                typeSpeed = 3; // vitesse rapide
+                typeScore = 0; // score pour vitesse rapide
+            } else if (typeValeur === "à clou") {
+                typeSpeed = 1; // vitesse normale
+                typeScore = 100; // score pour vitesse normale
+            } else if (typeValeur === "à aube") {
+                typeSpeed = 2; // vitesse lente
+                typeScore = 50; // score pour vitesse lente
+            }
+
+            if (formeValeur === "rond") {
+                formeSpeed = 1;
+                formeScore = 100;
+            } else if (formeValeur === "carre") {
+                formeSpeed = 3;
+                formeScore = 0;
+            } else if (formeValeur === "etoile") {
+                formeSpeed = 2;
+                formeScore = 50;
+            }
+
+
+            if (matiereValeur === "caoutchouc") {
+                matiereSpeed = 1;
+                matiereScore = 100;
+            } else if (matiereValeur === "bois") {
+                matiereSpeed = 2;
+                matiereScore = 50;
+            } else if (matiereValeur === "metal") {
+                matiereSpeed = 3;
+                matiereScore = 0;
+            }
+            break;
+
     }
+
 
     let speed = typeSpeed + formeSpeed + matiereSpeed;
     let score = typeScore + formeScore + matiereScore;
