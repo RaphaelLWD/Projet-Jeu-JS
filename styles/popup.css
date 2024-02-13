@@ -1,0 +1,18 @@
+.Display {
+    display: none;
+}
+.Play{
+    display: block;
+}
+.reglesDeJeu{
+    color: orange;
+  background-color: black;
+  border: 2px solid orange;
+  border-radius: 15px;
+  height: 347px;
+  width: 615px;
+  z-index: 5;
+  position: absolute;
+  top: 50px;
+  left: 110px;
+}

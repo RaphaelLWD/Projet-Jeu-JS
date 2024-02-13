@@ -9,7 +9,7 @@
      z-index: 4;
     position: relative;;
 }
-#iconeUp{
+#icon{
     z-index: 5;
     top: 2vh;
     left: 4vh;
@@ -41,8 +41,8 @@ h2{
      z-index: 6;
     margin-left: 77vh;
     padding: 4vh;
-    top: 77vh;
-     left: 25vh;
+    top: 75vh;
+    left: 18vh;
     animation: blinkAnimation 2s infinite;
 }
 

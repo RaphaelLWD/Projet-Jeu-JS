@@ -21,6 +21,7 @@ h1{
   border: 2px solid orange;
   padding: 10px 10px 10px 10px;
   margin: 0px;
+  z-index: 6;
     }
   .bouton:hover{
     background-color: orange;
@@ -95,7 +96,7 @@ h1{
   margin: 10px 89px;
   }
 .trajet{
-    position: absolute;
+  position: absolute;
   width: 90%;
   height: 16vh;
   margin-left: 15vh;
@@ -104,9 +105,9 @@ h1{
 .trajetVehicule{
   width: 9%;
   position: absolute;
-}
-.trajetVehicule:hover{
-  cursor: pointer;
+  top:0;
+  left:0;
+  transition: left 1s linear;
 }
 #footer{
  width: 90%;
@@ -158,8 +159,8 @@ h1{
   color: black;
   border: 2px solid black;
   border-radius: 15px;
-  top: 108vh;
-  left: 93vh;
+  top: 18vh;
+  left: 169vh;;
   padding: 2vh;
   animation: blinkAnimation 2s infinite;
 }

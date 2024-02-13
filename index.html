@@ -6,74 +6,74 @@
     <title>Smarttruck</title>
     <link rel="stylesheet" href="./styles/circuit.css">
     <link rel="stylesheet" href="./styles/acceuil.css">
+    <link rel="stylesheet" href="./styles/popup.css">
     <script src="./script.js" type="module"></script>
 </head>
 <body>
 
-    <div id="ecranAcc">
-        <img src="./medias/volume-eleve.png" alt="" id="iconeUp">
+    <div id="ecranAcc" class="Play popUp">
+        <button id="toggleButton"><img src="./medias/volume-eleve.png" alt="Play" id="icon"></button>
+        <audio src="./medias/The Fly Guy Five - Balloons on Parade (Royalty Free Music).mp3" id="audio" preload="auto"></audio>
         <h2>SMART-TRUCK</h2>
-        <img src="./medias/EcranAcceuil.jpg" alt="" id="imageAcc">
-        <button id="boutonAcc">EN ROUTE</button>
-        </div>
-    
-    <header id="header">
-
+        <img src="./medias/EcranAcceuil.jpg" alt="Image qui switch toutes les 5 secondes" id="imageAcc">
+        <button id="boutonAcc">Prêt pour le départ ?</button>
+    </div>
+    <div class="reglesDeJeu Display">
         
-        <button id="regles" class="bouton">REGLES</button>
+    </div>
+    <div class="Display jeu">
+        <header id="header">
+                   
+            <button id="regles" class="bouton">REGLES</button>
 
-        <h1>SMART-TRUCK</h1>
+             <h1>SMART-TRUCK</h1>
 
-        <p class="typeCircuit">ROUTE EN GOUDRON</p>
+             <p class="typeCircuit">ROUTE EN GOUDRON</p>
 
-        <button id="scores" class="bouton">SCORES</button>
+             <button id="score" class="bouton">Score Course</button>
         
-    </header>
-    <main id="main">
+        </header>
+        
+        <main id="main">
 
-        <img src="./medias/NormalRoad.jpg" alt="" class="routeGoudron">
-        <div class="trajet">
-            <img src="./medias/VanDeSurfPNG.png" alt="" class="trajetVehicule">
-        </div>
+             <img src="./medias/EcranAcceuil.jpg" alt="" class="routeGoudron">
+
+             <div class="trajet">
+               <img src="./medias/VanDeSurfPNG.png" alt="" class="trajetVehicule">
+             </div>
 
 
-    </main>
-    <footer id="footer">
+        </main>
+        <footer id="footer">
 
-        <div id="form" class="attribut">FORME
-            <p>Choix de la forme de la roue</p>
-                <input type="radio" id="ronde" name="options" value="ronde">
-                <label for="ronde"  id="boutonChoix">RONDE</label><br>
-                <input type="radio" id="carre" name="options" value="carre">
-                <label for="carre" id="boutonChoix">CARRE</label><br>
-                <input type="radio" id="etoile" name="options" value="etoile">
-                <label for="etoile" id="boutonChoix">ETOILE</label><br><br>
-        </div>
+            <div id="type" class="attribut">TYPE
+                <p>Choix du type de roue</p>
+                <label><input type="radio" id="lisse" name="type" value="lisse"  class="recupDonnees">Lisse</label>  
+                <label><input type="radio" id="à clou" name="type" value="à clou" class="recupDonnees">A clou</label>
+                <label><input type="radio" id="à aube" name="type" value="à aube" class="recupDonnees">A aube</label>
+            </div>
             
-        <div id="matiere" class="attribut">MATIERE
+            <div id="forme" class="attribut">FORME
+                <p>Choix de la forme de la roue</p>
+                <label><input type="radio" id="rond" name="forme" value="rond" class="recupDonnees">Rond</label>
+                <label><input type="radio" id="carre" name="forme" value="carre" class="recupDonnees">Carre</label>
+                <label><input type="radio" id="etoile" name="forme" value="etoile" class="recupDonnees">Etoile</label>
+            </div>
+            <div id="matiere" class="attribut">MATIERE
                 <p>Choix de la matière de la roue</p>
-                <input type="radio" id="caoutchouc" name="options" value="caoutchouc">
-                <label for="caoutchouc"  id="boutonChoix">CAOUTCHOUC</label><br>
-                <input type="radio" id="metal" name="options" value="metal">
-                <label for="metal" id="boutonChoix">METAL</label><br>
-                <input type="radio" id="bois" name="options" value="bois">
-                <label for="bois" id="boutonChoix">BOIS</label><br><br>
-        </div>
-        <div id="type" class="attribut">TYPE
-            <p>Choix du type de la roue</p>
-                <input type="radio" id="lisse" name="LISSE" value="lisse" onclick="appliquerLisse()">
-                <label for="lisse"  id="boutonChoix">LISSE</label><br>
-                <input type="radio" id="clou" name="CLOUTER" value="clou" onclick="appliquerClou()">
-                <label for="clou" id="boutonChoix">A CLOU</label><br>
-                <input type="radio" id="aube" name="A AUBE" value="aube" onclick="appliquerAube()">
-                <label for="aube" id="boutonChoix">A AUBE</label><br><br>
-        </div>
-        <div id="vosChoix"></div>
-            
+                <label><input type="radio" id="caoutchouc" name="matiere" value="caoutchouc"  class="recupType">Caoutchouc</label>
+                <label><input type="radio" id="bois" name="matiere" value="bois"  class="recupType">Bois</label>
+                <label><input type="radio" id="metal" name="matiere" value="metal"  class="recupType">Métal</label>
+            </div>
+            <div id="votreScore"></div>
 
-        <button class="enRoute">EN ROUTE</button>
-        <div id="ecranSelectionVehicule"></div>
-        </footer>
+            <button id="startButton" class="enRoute">EN ROUTE</button>    
+            <button id="nextButton" class="enRoute">NEXT</button>
+        
+            <div id="ecranSelectionVehicule"></div>
+        </footer>    
+    </div>
+    
 </body>
 
 </html>
