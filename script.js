@@ -338,8 +338,12 @@ reglesBouton.addEventListener("click", () => {
     Réflechissez aux attributs à ajouter à votre véhicule sur chaque circuits pour franchir
     les 5 terrains de manière la plus optimal.
 
+    Rentrez vos choix puis appuyer sur "En route", à la fin du trajet votre score s'affiche, appuyez sur Next pour revenir au départ et une nouvelle fois sur Next pour passer au circuit suivant.
+
     Chaque circuit peut vous octroyer entre 0 et 300 points.
-    Le score maximal possible est de 1000 points.
+    Le score maximal possible est de 1500 points.
+
+
     
     Vos choix seront décisifs quand au score final!
     
